@@ -158,34 +158,48 @@ target 속성값
 
 ### 입력받기
 
+`id` 는 페이지마다 고유한 속성이어야 함
+
 <table>
-<thead>
-<tr>
-<th align="left">태그</th>
-<th align="left">설명</th>
-<th align="left">비고</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>&lt;form&gt;</code></td>
-<td align="left">정보를 제출하기 위한 태그들을 포함</td>
-<td align="left"><code>autocomplete</code> 속성: 자동완성 여부 (기본: <code>on</code>)</td>
-</tr>
-<tr>
-<td align="left"><code>&lt;input&gt;</code></td>
-<td align="left">입력을 받는 요소</td>
-<td align="left"><code>type</code> 속성을 통해 다양화</td>
-</tr>
-<tr>
-<td align="left"><code>&lt;label&gt;</code></td>
-<td align="left">인풋 요소마다의 라벨</td>
-<td align="left"><code>for</code> 속성값을 인풋 요소의 <code>id</code>와 연결. 인풋의 <strong>클릭 영역 확장</strong></td>
-</tr>
-<tr>
-<td align="left"><code>&lt;button&gt;</code></td>
-<td align="left">버튼</td>
-<td align="left"><code>type</code> 속성에 <code>submit</code>(제출), <code>reset</code>(초기화), <code>button</code>(기본 동작 없음)</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th align="left">태그</th>
+      <th align="left">설명</th>
+      <th align="left">비고</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left"><code>&lt;form&gt;</code></td>
+      <td align="left">정보를 제출하기 위한 태그들을 포함</td>
+      <td align="left"><code>autocomplete</code> 속성: 자동완성 여부 (기본: <code>on</code>)</td>
+    </tr>
+    <tr>
+      <td align="left"><code>&lt;input&gt;</code></td>
+      <td align="left">입력을 받는 요소</td>
+      <td align="left"><code>type</code> 속성을 통해 다양화</td>
+    </tr>
+    <tr>
+      <td align="left"><code>&lt;label&gt;</code></td>
+      <td align="left">인풋 요소마다의 라벨</td>
+      <td align="left"><code>for</code> 속성값을 인풋 요소의 <code>id</code>와 연결. 인풋의 <strong>클릭 영역 확장</strong></td>
+    </tr>
+    <tr>
+      <td align="left"><code>&lt;button&gt;</code></td>
+      <td align="left">버튼</td>
+      <td align="left"><code>type</code> 속성에 <code>submit</code>(제출), <code>reset</code>(초기화), <code>button</code>(기본 동작 없음)</td>
+    </tr>
+    <tr>
+      <td align="left"><code>&lt;fieldset&gt;</code></td>
+      <td align="left">폼 태그 내 입력요소와 라벨들을 그룹화</td>
+      <td align="left"><code>disabled</code> 속성: 포함된 입력요소 비활성화</td>
+    </tr>
+    <tr>
+      <td align="left"><code>&lt;legend&gt;</code></td>
+      <td align="left">필드셋 요소의 제목 또는 설명</td>
+      <td align="left"></td>
+    </tr>
+  </tbody>
 </table>
+
+
