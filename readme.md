@@ -135,9 +135,23 @@ Unsplash : https://unsplash.com/
 
 ### 링크
 
+자막 달기 : https://www.easy-subtitle.com/
+
 target 속성값
 
 - _self : 현재 창	기본
 - _blank : 새 창, 텍스트나 내부 이미지의 alt 등으로 명시 필요
 - _parent : 부모 프레임, <iframe> 사용시
 - _top : 최상위 프레임, <iframe> 사용시
+
+### address
+
+```html
+<h1>Contacts</h1>
+<address>
+  웹사이트 주소: <a href="https://www.yalco.kr">yalco.kr</a> <br>
+  오피스: 전산시 개발구 코딩동 123번길 45 <br>
+  전화 <a href="tel:010-1234-5678">010-1234-5678</a> <br>
+  이메일: <a href="mailto:yalco@kakao.com">yalco@kakao.com</a>
+</address>
+```
