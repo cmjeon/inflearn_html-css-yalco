@@ -202,4 +202,15 @@ target 속성값
   </tbody>
 </table>
 
+### input
 
+input : https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input
+
+### 시간 관련 타입
+
+<p>👉
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/datetime-local" target="_blank">datetime-local</a>,
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/month" target="_blank">month</a>,
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/time" target="_blank">time</a>,
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/week" target="_blank">week</a>
+</p>
