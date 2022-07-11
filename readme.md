@@ -114,3 +114,30 @@ Unsplash : https://unsplash.com/
 오늘날에는 잘 사용되지 않음
 
 이미지 맵 생성사이트 : https://www.image-map.net/
+
+### 테이블
+
+<h3>⚠️ <code>&lt;table&gt;</code>은 <strong>표</strong> 용도로만 사용할 것! - <em><s>레이아웃</s></em></h3>
+
+- `<table>` : 테이블	
+- `<caption>` : 표 설명 또는 제목	선택사항
+- `<tr>` : 테이블의 행	
+- `<td>` : 테이블의 데이터 셀
+- `<thead>`	: 테이블의 헤더 부분, tbody : 앞에 와야 함
+- `<tbody>`	: 테이블의 본문 본 내용을 담음
+- `<tfoot>` :	테이블의 푸터 부분
+- `<tbody>` : 뒤에 와야 함
+- `<th>` : 열 또는 행의 헤더	scope 속성으로 row, col 중 선택
+- colspan : 열 병합
+- rowspan : 행 병합
+- `<colgroup>` : 표에 열을 묶어서 속성 부여, <caption>보다 뒤, 그 외 요소보다 앞에 와야 함
+- `<col>` : 열의 묶음, span 속성으로 열 수 지정
+
+### 링크
+
+target 속성값
+
+- _self : 현재 창	기본
+- _blank : 새 창, 텍스트나 내부 이미지의 alt 등으로 명시 필요
+- _parent : 부모 프레임, <iframe> 사용시
+- _top : 최상위 프레임, <iframe> 사용시
