@@ -81,3 +81,36 @@ dt 와 dd 는 n:n 관계가 가능
 dt : 용어
 
 dd : 정의
+
+### 이미지 넣기
+
+```html
+<img src="(이미지 파일 경로)" alt="(대체 텍스트)" title="(툴팁 텍스트)">
+```
+
+- src : 원본파일 경로, 절대경로 또는 상대경로 
+- alt : 대체 텍스트	스크린 리더, 원본파일 무효시 
+- title : 툴팁	alt의 대체제나 반복이 되어서는 안됨 
+- width :	너비	픽셀 단위의 정수 
+- height : 높이	픽셀 단위의 정수
+
+### 무료 이미지 사이트
+
+Pixabay : https://pixabay.com/
+
+Unsplash : https://unsplash.com/
+
+### 맵 기능
+
+```html
+<img src="./map.png" alt="맵" usemap="#image-map">
+  <map name="image-map">
+    <area target="_blank" alt="Google" title="Google" href="https://www.google.com" coords="141,140,96" shape="circle">
+    <area target="_blank" alt="Apple" title="Apple" href="https://www.apple.com" coords="332,50,510,227" shape="rect">
+    <area target="_blank" alt="Microsoft" title="Microsoft" href="https://www.microsoft.com" coords="650,51,598,139,650,229,751,228,802,141,753,52" shape="poly">
+  </map>
+```
+
+오늘날에는 잘 사용되지 않음
+
+이미지 맵 생성사이트 : https://www.image-map.net/
