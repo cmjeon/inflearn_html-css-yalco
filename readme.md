@@ -24,7 +24,7 @@ HTML CSS JavaScript : https://html-css-js.com/
 
 ## 종류와 중요도에 따른 태그
 
-### strong 태그 vs. em 태그 비교
+## strong 태그 vs. em 태그 비교
 
 https://developer.mozilla.org/ko/docs/Web/HTML/Element/strong#%3Cem%3E_vs._%3Cstrong%3E
 
@@ -32,19 +32,19 @@ strong : 중요한 내용
 
 em : 강세
 
-### 첨자 태그
+## 첨자 태그
 
 sup : 지수, 서수
 
 sub : 각주, 변수, 화학식
 
-### 밑줄 태그와 취소선 태그
+## 밑줄 태그와 취소선 태그
 
 u : 철자 오류 표시
 
 s : 더 이상 유효하지 않은 정보 표시
 
-### 인용된 콘텐츠
+## 인용된 콘텐츠
 
 문자 entity name 목록 보기 : https://html.spec.whatwg.org/multipage/named-characters.html
 
@@ -64,7 +64,7 @@ abbr : 준말/머릿글자 표시
 </p>
 ```
 
-### ul, ol, li
+## ul, ol, li
 
 웹 상에서 나열되는 모든 요소들을 표현
 
@@ -74,7 +74,7 @@ ol : ordered list
 
 li : 목록 아이템, ul, ol 의 1촌 자식은 오직 li 만 가능
 
-### dl, dt, dd
+## dl, dt, dd
 
 dt 와 dd 는 n:n 관계가 가능
 
@@ -82,7 +82,7 @@ dt : 용어
 
 dd : 정의
 
-### 이미지 넣기
+## 이미지 넣기
 
 ```html
 <img src="(이미지 파일 경로)" alt="(대체 텍스트)" title="(툴팁 텍스트)">
@@ -94,13 +94,13 @@ dd : 정의
 - width :	너비	픽셀 단위의 정수 
 - height : 높이	픽셀 단위의 정수
 
-### 무료 이미지 사이트
+## 무료 이미지 사이트
 
 Pixabay : https://pixabay.com/
 
 Unsplash : https://unsplash.com/
 
-### 맵 기능
+## 맵 기능
 
 ```html
 <img src="./map.png" alt="맵" usemap="#image-map">
@@ -115,7 +115,7 @@ Unsplash : https://unsplash.com/
 
 이미지 맵 생성사이트 : https://www.image-map.net/
 
-### 테이블
+## 테이블
 
 <h3>⚠️ <code>&lt;table&gt;</code>은 <strong>표</strong> 용도로만 사용할 것! - <em><s>레이아웃</s></em></h3>
 
@@ -133,7 +133,7 @@ Unsplash : https://unsplash.com/
 - `<colgroup>` : 표에 열을 묶어서 속성 부여, <caption>보다 뒤, 그 외 요소보다 앞에 와야 함
 - `<col>` : 열의 묶음, span 속성으로 열 수 지정
 
-### 링크
+## 링크
 
 자막 달기 : https://www.easy-subtitle.com/
 
@@ -144,7 +144,7 @@ target 속성값
 - _parent : 부모 프레임, <iframe> 사용시
 - _top : 최상위 프레임, <iframe> 사용시
 
-### address
+## address
 
 ```html
 <h1>Contacts</h1>
@@ -156,7 +156,7 @@ target 속성값
 </address>
 ```
 
-### 입력받기
+## 입력받기
 
 `id` 는 페이지마다 고유한 속성이어야 함
 
@@ -202,11 +202,11 @@ target 속성값
   </tbody>
 </table>
 
-### input
+## input
 
 input : https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input
 
-### 시간 관련 타입
+## 시간 관련 타입
 
 <p>👉
   <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/datetime-local" target="_blank">datetime-local</a>,
@@ -214,3 +214,141 @@ input : https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input
   <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/time" target="_blank">time</a>,
   <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/week" target="_blank">week</a>
 </p>
+
+## datalist
+
+select 와 유사한데, 입력도 받을 수 있음
+
+```html
+<datalist id="jobs">
+  <option value="학생"></option>
+  <option value="디자이너"></option>
+  <option value="퍼블리셔"></option>
+  <option value="개발자"></option>
+</datalist>
+```
+
+## pre
+
+HTML 내에 입력한 그대로 보이는 태그, ASCII art 사용 시 등에 사용
+
+## div, span
+
+# Section 2. <꾸미는> CSS
+
+```css
+/* 모든 요소 선택 */
+* {
+  font-weight: bold;
+  color: darkorange;
+}
+
+/* 같은 선택자의 경우 뒤에 오는 것이 우선순위 높음 */
+* {
+  color: plum;
+}
+
+/* 태그 선택자 */
+p {
+  color: olivedrab;
+}
+
+/* class 선택자 */
+/* 태그보다 우선순위 높음 */
+/* 페이지상의 여러 요소가 같은 class를 가질 수 있음 */
+.blue {
+  color: lightblue;
+}
+
+/* 다른 선택자에 이어붙일 수 있음(태그, 클래스 등...) */
+/* 선택자는 구체적일수록 우선순위 높음 */
+p.blue {
+  color: slateblue;
+}
+
+.blue.dark {
+  color: mediumblue;
+}
+
+p.blue.dark {
+  color: darkblue;
+}
+
+/* id 선택자 */
+/* class보다 우선순위 높음 */
+/* id는 페이지상에서 요소마다 고유해야 함 */
+#red {
+  color: tomato;
+}
+
+/* 그룹 선택자 */
+span, .dark, #red {
+  text-decoration: underline;
+}
+```
+
+```css
+/* 자손 결합자 */
+.outer li {
+    color: olivedrab;
+}
+
+/* 자식(1촌 자손) 결합자 */
+.outer > li {
+    color: dodgerblue;
+}
+
+.outer > li li {
+    text-decoration: underline;
+}
+
+/* 뒤따르는 모든 동생들 결합자 */
+.starter ~ li {
+    font-style: italic;
+}
+
+/* 뒤따르는 바로 다음 동생 결합자 */
+.starter + li {
+    font-weight: bold;
+}
+
+/* 첫 번째, 마지막 요소 가상 클래스 */
+ol li:first-child,
+ol li:last-child {
+    color: yellowgreen;
+}
+
+/* ~가 아닌 요소 가상 클래스 */
+.outer > li:not(:last-child) {
+    text-decoration: line-through;
+}
+
+ul:not(.outer) li {
+    font-weight: bold;
+}
+
+/* ~번째 요소 가상 클래스 */
+/* #, #n, #n+#, odd, even 등 시도해보기 */
+ol li:nth-child(3) {
+    font-weight: bold;
+    color: deeppink;
+}
+
+/* 마우스오버 가상 클래스 */
+li:hover {
+    font-weight: bold;
+    color: blue;
+}
+```
+
+https://flukeout.github.io/
+
+## font-size
+
+px는 절대값으로서 픽셀 단위입니다.
+
+100%는 1em으로, 이들은 부모 요소와의 상대적 크기를 나타내죠.
+
+rem은 html 요소와의 상대적 크기를 가지므로, 요소의 중첩에 영향을 받지 않습니다.
+
+pt는 1인치/72로, 프린트할 컨텐츠에 사용됩니다.
