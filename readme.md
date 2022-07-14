@@ -141,8 +141,8 @@ target 속성값
 
 - _self : 현재 창	기본
 - _blank : 새 창, 텍스트나 내부 이미지의 alt 등으로 명시 필요
-- _parent : 부모 프레임, <iframe> 사용시
-- _top : 최상위 프레임, <iframe> 사용시
+- _parent : 부모 프레임, `<iframe>` 사용시
+- _top : 최상위 프레임, `<iframe>` 사용시
 
 ## address
 
@@ -352,3 +352,19 @@ px는 절대값으로서 픽셀 단위입니다.
 rem은 html 요소와의 상대적 크기를 가지므로, 요소의 중첩에 영향을 받지 않습니다.
 
 pt는 1인치/72로, 프린트할 컨텐츠에 사용됩니다.
+
+## color
+
+https://developer.mozilla.org/ko/docs/Web/CSS/color_value
+
+https://www.google.com/search?q=color+picker&oq=color+picker&aqs=chrome..69i57.144j0j4&sourceid=chrome&ie=UTF-8
+
+## 인라인요소와 블록요소
+
+|                      | inline           | block | inline-block |
+|----------------------|------------------|---------------|--------------|
+| 기본 너비                | 컨텐츠만큼            | 부모의 너비만큼      | 컨텐츠만큼        |
+| width, height 속성     | 무시               | 적용            | 적용           |
+| 가로공간 차지              | 공유               | 독점            | 공유           |
+| margin 속성 ( 바깥쪽 여백 ) | 가로만 적용           | 모두 적용 (상하 상쇄) | 모두 적용        |
+| adding 속성 ( 안쪽 여백 )  | 가로만 적용, 세로는 배경색만 | 모두적용          | 모두 적용        |
