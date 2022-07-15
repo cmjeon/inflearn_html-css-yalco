@@ -368,3 +368,71 @@ https://www.google.com/search?q=color+picker&oq=color+picker&aqs=chrome..69i57.1
 | 가로공간 차지              | 공유               | 독점            | 공유           |
 | margin 속성 ( 바깥쪽 여백 ) | 가로만 적용           | 모두 적용 (상하 상쇄) | 모두 적용        |
 | adding 속성 ( 안쪽 여백 )  | 가로만 적용, 세로는 배경색만 | 모두적용          | 모두 적용        |
+
+## border
+
+맨 마지막줄 제외한 border-bottom 지정
+
+```html
+<ul>
+  <li>ul 아이템 1</li>
+  <li>ul 아이템 2</li>
+  <li>ul 아이템 3</li>
+  <li>ul 아이템 4</li>
+  <li>ul 아이템 5</li>
+</ul>
+```
+
+```css
+ul > li:not(:last-child) {
+  border-bottom : solid 1px black;
+}
+```
+
+## positon
+
+https://www.yalco.kr/@html-css/2-9/
+
+static은 기본값으로, 전적으로 페이지의 흐름을 따르며 top, bottom, left, right, z-index 속성의 영향을 받지 않습니다.
+
+static 으로 선언되면 자식요소의 기준이 될 수 없습니다.
+
+relative 값은 원래 위치를 기준으로 top~right 속성값이 적용되도록 합니다.
+
+요소의 위치는 이동하지만 요소가 차지하는 공백의 위치는 유지됩니다.
+
+absolute 값은 static이 아닌 첫 부모 요소를 기준으로 top~right을 사용하여 위치를 조정할 수 있습니다.
+
+요소는 페이지의 문서 흐름에서 벗어나, 자리를 차지하지 않게 됩니다.(위의 바깥쪽 div는 포지션이 relative로 되어 있습니다.)
+
+fixed는 부모 요소가 아닌 viewport를 기준으로 위치를 지정합니다.
+
+스크롤에 영향을 받지 않으므로, 다이얼로그 팝업처럼 움직이지 않는 요소들에 유용하게 사용될 수 있습니다.
+
+sticky는 요소가 스크롤로 이동할 수 있는 공간을 top~right 속성으로 제한할 수 있습니다.
+
+## flex layout
+
+https://www.yalco.kr/@html-css/2-11/
+
+display를 flex로 지정하면 플렉스 방식으로 자식 요소들을 배치하게 됩니다.
+
+inline-flex는 해당 컨테니어 요소를 인라인으로 만든다는 차이가 있습니다.
+
+flex-direction은 내부 요소(아이템)들을 어느 축(가로 또는 세로)을 이 값에 따라 justify-content, align-items, align-content 등의 속성들이 작용할 방향이 결정됩니다.
+
+flex-wrap은 내부 요소의 갯수 X 길이가 컨테이너를 넘어갈 때 이들을 여러 줄에 걸쳐 나열할지 여부를 정합니다.
+
+justify-content는 메인 축에서 아이템들을 정렬할 방식을 정합니다.
+
+flex-start(end)는 row(column)-reverse의 영향을 받는다는 점에서 start(end)와 다릅니다. flex-가 붙은 것을 사용하세요.
+
+align-items는 수직 축(메인 축의 반대)에서 아이템들을 정렬할 방식을 정합니다. 
+
+wrap으로 아이템이 여러 줄이 되면 align-content를 사용해서 보다 다양한 방식으로 정렬할 수 있습니다.
+
+gap 속성으로는 아이템간에 간격을 줄 수 있으며 두 개의 값을 넣어서 가로 간격과 세로 간격을 다르게 지정하는 것도 가능합니다.
+
+# 참고
+
+https://www.inflearn.com/course/%EC%A0%9C%EB%8C%80%EB%A1%9C-%ED%8C%8C%EB%8A%94-html-css
