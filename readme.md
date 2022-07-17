@@ -433,6 +433,175 @@ wrap으로 아이템이 여러 줄이 되면 align-content를 사용해서 보�
 
 gap 속성으로는 아이템간에 간격을 줄 수 있으며 두 개의 값을 넣어서 가로 간격과 세로 간격을 다르게 지정하는 것도 가능합니다.
 
+# Section 3. HTML 더 깊이 알아보기
+
+## 상단의 태그들
+
+https://developer.mozilla.org/ko/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
+
+## 모두가 이용할 수 있는 웹사이트
+
+https://nuli.navercorp.com/
+
+눈에는 안보이지만 스크린리더에서는 보이도록 할 수 있음
+
+```html
+<img src="./sr-only.png" alt="">
+<p class="sr-only">
+  노트북으로 뭔가 공부하고 있는 아이의 독백: 코딩을 배우면 아마 굶지는 않을거랬어.
+</p>
+
+<dl>
+  <dt class="sr-only">분야</dt>
+  <dd>프로그래밍</dd>
+  <dt class="sr-only">종류</dt>
+  <dd>스티커</dd>
+  <dt class="sr-only">디자이너</dt>
+  <dd>얄코</dd>
+  <dt class="sr-only">제작년도</dt>
+  <dd>2021</dd>
+</dl>
+```
+
+```css
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+```
+
+페이지네이션 처리
+
+```html
+<div class="page-buttons">
+  <button aria-label="이전 페이지로">◀</button>
+  <button aria-label="1번째 페이지로 (현재 페이지)" class="current">1</button>
+  <button aria-label="2번째 페이지로">2</button>
+  <button aria-label="3번째 페이지로">3</button>
+  <button aria-label="4번째 페이지로">4</button>
+  <button aria-label="5번째 페이지로">5</button>
+  <button aria-label="다음 페이지로">▶</button>
+</div>
+```
+
+눈에는 보이지만 스크린리더에 감추기 role, aria-label
+
+```html
+<div class="example">
+  <span aria-hidden="true">😀</span> 반갑습니다!
+</div>
+<p>
+  이모지나 SVG 요소 등을 스크린 리더에게만 감추고 싶다면 <br>
+  <strong>aria-hidden</strong> 속성을 <em>true</em>로 만들어줍니다.
+</p>
+
+<br>
+
+<div class="example">
+  I <span role="img" aria-label="love">❤️</span> CODING!
+</div>
+<p>
+  특정 정보를 나타내는 이모지나 SVG 요소 등을 <br>
+  스크린 리더가 특정 텍스트로 읽도록 하려면 <br>
+  <strong>role</strong> 속성으로 이미지임을 명시하고 <br>
+  <strong>aria-label</strong> 속성에 값을 넣습니다.
+</p>
+```
+
+figure, figcaption
+
+```html
+  <figure>
+    <img src="./sr-only.png" alt="">
+    <figcaption class="sr-only">
+      노트북으로 뭔가 공부하고 있는 아이의 독백: 코딩을 배우면 아마 굶지는 않을거랬어.
+    </figcaption>
+  </figure>
+
+  <br>
+
+  <figure>
+    <pre>
+    ,d888a                          ,d88888888888ba.  ,88"I)   d
+  a88']8i                         a88".8"8)   `"8888:88  " _a8'
+.d8P' PP                        .d8P'.8  d)      "8:88:baad8P'
+,d8P' ,ama,   .aa,  .ama.g ,mmm  d8P' 8  .8'        88):888P'
+,d88' d8[ "8..a8"88 ,8I"88[ I88' d88   ]IaI"        d8[         
+a88' dP "bm8mP8'(8'.8I  8[      d88'    `"         .88          
+,88I ]8'  .d'.8     88' ,8' I[  ,88P ,ama    ,ama,  d8[  .ama.g
+[88' I8, .d' ]8,  ,88B ,d8 aI   (88',88"8)  d8[ "8. 88 ,8I"88[
+]88  `888P'  `8888" "88P"8m"    I88 88[ 8[ dP "bm8m88[.8I  8[
+]88,          _,,aaaaaa,_       I88 8"  8 ]P'  .d' 88 88' ,8' I[
+`888a,.  ,aadd88888888888bma.   )88,  ,]I I8, .d' )88a8B ,d8 aI
+"888888PP"'        `8""""""8   "888PP'  `888P'  `88P"88P"8m"
+    </pre>
+    <figcaption class="sr-only">
+      코카콜라 로고를 표현한 아스키 아트
+    </figcaption>
+  </figure>
+```
+
+웹 접근성 직군별 교육 : https://nuli.navercorp.com/education
+
+## 용도에 따른 태그 사용하기
+
+https://www.yalco.kr/@html-css-scoop/3-3/
+
+시맨틱 태그가 무엇인가요?
+
+- HTML5의 여러 태그들은 그 자체로 어떤 의미를 지닙니다.
+
+이번 시간에 배울, 왼쪽 사이드바에 나열된 태그들은 기능적으로는 div 태그와 동일하지만 각각의 종류 자체가 페이지에서 해당 요소가 갖는 의미와 역할을 나타내죠.
+
+## 가독성을 위한 이름 짓기
+
+BEM : Block Element Modifier
+
+https://en.bem.info/
+
+https://9elements.com/bem-cheat-sheet/
+
+class 명의 부적절한 사례
+
+```css
+.card { /* ... */ }
+.card .thumb { /* ... */ }
+.card .thumb .image { /* ... */ }
+.card .body .title { /* ... */ }
+.card .body .list { /* ... */ }
+.card .body .list .list-item { /* ... */ }
+.card .body .list .list-item.special { /* ... */ }
+```
+
+BEM 으로 class 를 명명한 사례
+
+```css
+.card { /* ... */ }
+.card__thumb { /* ... */ }
+.card__image { /* ... */ }
+.card__title { /* ... */ }
+.card__list { /* ... */ }
+.card__list-item { /* ... */ }
+.card__list-item--special { /* ... */ }
+```
+
+Block 의 크기를 정의하는 것이 중요함
+
+## 기타 미디어
+
+https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg
+
+https://www.shapedivider.app/
+
+https://app.haikei.app/
+
 # 참고
 
 https://www.inflearn.com/course/%EC%A0%9C%EB%8C%80%EB%A1%9C-%ED%8C%8C%EB%8A%94-html-css
