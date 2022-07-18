@@ -604,6 +604,8 @@ https://app.haikei.app/
 
 # CSS 더 깊이 알아보기
 
+## 반복, 공통되는 스타일 
+
 다른 css 파일 import 하기
 
 ```css
@@ -681,6 +683,178 @@ http://paletton.com/
 https://colorhunt.co/
 
 https://gradienthunt.com/
+
+## 선택자 심화
+
+### 특성 선택자
+
+```css
+/* 속성 값을 기준으로 선택 */
+a[href="https://www.yalco.kr"] {
+  color: #ff4e00;
+  font-weight: bold;
+}
+
+/* 특정 속성이 있는 요소 선택 */
+input[disabled]+label {
+  color: lightgray;
+  text-decoration: line-through;
+}
+
+/* 속성값이 특정 텍스트를 포함하는 요소 */
+span[class*="item"] {
+  text-decoration: underline;
+}
+
+/* 속성값이 특정 텍스트로 시작하는 요소 */
+span[class^="fruit"] {
+  color: tomato;
+}
+span[class^="vege"] {
+  color: olivedrab;
+}
+
+/* 속성값이 특정 텍스트로 끝나는 요소 */
+span[class$="-1"] {
+  font-weight: bold;
+}
+```
+
+특성 선택자 https://developer.mozilla.org/ko/docs/Web/CSS/Attribute_selectors
+
+### 가상 클래스 1
+
+```css
+/* 마우스오버 */
+a:hover {
+  background-color: yellow;
+}
+/* 클릭중 */
+a:active {
+  background-color: aqua;
+}
+
+/* 체크된 것 */
+input[type=radio]:checked+label {
+  color: tomato;
+  font-weight: bold;
+}
+/* 활성화된 것 */
+input[type=radio]:enabled+label {
+  text-decoration: underline;
+}
+/* 비활성화된 것 */
+input[type=radio]:disabled+label {
+  color: lightgray;
+  text-decoration: line-through;
+}
+```
+
+### 가상 클래스 2
+
+```css
+/* 인풋 등이 클릭되어 포커스된(입력을 받는) 상태 */
+input[type="text"]:focus {
+  /* border 밖의 선 (박스 요소가 아님) */
+  outline: 2px solid dodgerblue;
+}
+/* 필수 입력요소 */
+input:required {
+  border-color: orangered;
+}
+/* 값이 유효한 입력요소 */
+input[type="email"]:valid {
+  border-color: green;
+}
+/* 값이 무효한 입력요소 */
+input[type="email"]:not(:valid) {
+  border-color: purple;
+}
+
+[class*="focus"]:focus {
+  outline: 2px solid deeppink;
+}
+.tab-focus:focus,
+.no-focus:focus {
+  outline: none;
+}
+/* 탭으로 포커스된 요소에 적용 */
+/* 브라우저 지원 확인 */
+[class*="tab-focus"]:focus-visible {
+  outline: 2px solid dodgerblue;
+}
+```
+
+### 가상 클래스 3
+
+```css
+/* 부모 요소 내 첫 번째 ~요소 */
+b:first-of-type {
+  text-decoration: overline;
+}
+/* 부모 요소 내 마지막 ~요소 */
+i:last-of-type {
+  text-decoration: line-through;
+}
+/* 부모 요소 내 N번째 ~요소 */
+b:nth-of-type(2) {
+  text-decoration: underline;
+}
+
+/* 부모 요소 내 유일한 ~요소 */
+div :only-of-type {
+  text-decoration: overline line-through underline;
+}
+/* 부모 요소 내 종류 무관 유일한 요소 (독자) */
+div :only-child {
+  text-decoration: wavy underline tomato;
+}
+```
+
+의사 클래스 https://developer.mozilla.org/ko/docs/Web/CSS/Pseudo-classes
+
+### 가상 요소
+
+```css
+li.later::after {
+  content: '다음 강좌';
+  margin-left: 0.6em;
+  padding: 0.16em 0.36em;
+  font-size: 0.72em;
+  font-weight: bold;
+  color: white;
+  background-color: darkmagenta;
+  border-radius: 0.2em;
+}
+
+/* 바로 앞에 가상의 요소 추가 */
+li::before {
+  content: '';
+  display: inline-block;
+  margin: 0 0.4em;
+  width: 0.8em;
+  height: 0.8em;
+  background-image: url(./check.png);
+  background-size: contain;
+}
+
+/* 선택 영역 가상 요소 */
+.orange::selection {
+  background-color: orange;
+}
+.dark::selection {
+  color: lightgreen;
+  background-color: #222;
+}
+
+/* 플레이스홀더 가상 요소 */
+input:required::placeholder {
+  color: darkred;
+  background-color: yellow;
+}
+```
+
+의사 요소 : https://developer.mozilla.org/ko/docs/Web/CSS/Pseudo-elements
 
 # 참고
 
