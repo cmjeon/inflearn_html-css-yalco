@@ -602,6 +602,86 @@ https://www.shapedivider.app/
 
 https://app.haikei.app/
 
+# CSS 더 깊이 알아보기
+
+다른 css 파일 import 하기
+
+```css
+@import url(./shared.css);
+```
+
+CSS 변수 선언하기
+
+```css
+/* 특정 요소에서만 사용될 수 있는 변수 */
+u {
+  --not-good: wavy underline orange;
+  --wrong: wavy underline red;
+}
+.wrong {
+  --warn: yellow;
+}
+
+/* 모든 요소들에서 사용될 수 있는 변수 */
+:root {
+  --font-small: 8px;
+  --font-normal: 16px;
+  --font-large: 24px;
+  --font-x-large: 32px;
+  --font-xx-large: 40px;
+  --font-xxx-large: 48px;
+
+  --font-w-normal: 400;
+  --font-w-bold: 600;
+  --font-w-extrabold: 900;
+
+  --color-main: #FF4200;
+  --color-sub: #865A55;
+  --color-text: #49281C;
+}
+```
+
+변수 사용하기
+
+```css
+@import url(./common.css);
+
+body {
+  margin: 0;
+  padding: 24px;
+}
+
+.not-good {
+  text-decoration: var(--not-good);
+}
+.wrong {
+  text-decoration: var(--wrong);
+}
+
+/* 스코프에 지정된 변수가 없을 경우 대안 값을 넣을 수도 있습니다. */
+u {
+  background-color: var(--warn, lightblue);
+}
+
+h1 {
+  font-size: var(--font-x-large);
+}
+p {
+  font-size: var(--font-large);
+  color: var(--color-text);
+}
+```
+
+컬러 조합 사이트
+
+https://mycolor.space/
+
+http://paletton.com/
+
+https://colorhunt.co/
+
+https://gradienthunt.com/
+
 # 참고
 
 https://www.inflearn.com/course/%EC%A0%9C%EB%8C%80%EB%A1%9C-%ED%8C%8C%EB%8A%94-html-css
