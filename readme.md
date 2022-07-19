@@ -949,6 +949,50 @@ https://necolas.github.io/normalize.css/
 
 https://elad.medium.com/the-new-css-reset-53f41f13282e
 
+## 벤더 프리픽스 Vendor Prefixes
+
+각 브라우저에서 제공하는 css 속성
+
+아직 표준화되지 않은 CSS 속성들에 사용
+
+| 접두사         | 브라우저         |
+|-------------|--------------|
+| -webkit-    | 사파리, 크롬, 오페라 |
+| -moz-	| 파이어폭스        |
+|-ms-	| 엣지, 익스플로러    |
+|-o-	| 구버전 오페라      |
+
+```css
+.element {
+  -webkit-transition: all 4s ease;
+     -moz-transition: all 4s ease;
+      -ms-transition: all 4s ease;
+       -o-transition: all 4s ease;
+          transition: all 4s ease; /* 접두사가 붙지 않은 속성은 맨 마지막줄에 붙일 것(공식 속성을 마지막에 읽을 수 있도록) */
+}
+```
+
+```css
+.element {
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
+}
+```
+
+벤더 프리픽스가 붙은 css 로 바꿔주는 사이트
+
+https://autoprefixer.github.io/
+
+```css
+.element {
+  width: 100vw;
+  break-after: auto;
+  tab-size: 4;
+  writing-mode: horizontal-tb;
+}
+```
+
 # 참고
 
 https://www.inflearn.com/course/%EC%A0%9C%EB%8C%80%EB%A1%9C-%ED%8C%8C%EB%8A%94-html-css
