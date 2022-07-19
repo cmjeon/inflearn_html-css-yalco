@@ -856,6 +856,99 @@ input:required::placeholder {
 
 의사 요소 : https://developer.mozilla.org/ko/docs/Web/CSS/Pseudo-elements
 
+## 상속과 리셋
+
+상속되는 속성이 있음
+
+### inherit
+
+스스로의 값을 포기하고 부모로부터 받은 상속값을 적용
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance#inherited_properties
+
+https://developer.mozilla.org/ko/docs/Web/CSS/inherit
+
+### initial
+
+브라우저가 부여한 값을 포기하고 각 속성의 기본값을 적용
+
+https://developer.mozilla.org/ko/docs/Web/CSS/initial
+
+### unset
+
+상속되는 값이 있다면 inherit, 없다면 initial처럼 작동
+
+### revert
+
+unset과 같지만, 상속받지 않은 값을 초기값으로 되돌리지는 않음
+
+### all 속성
+
+대부분의 속성을 inherit, initial, unset, revert값으로 지정할 수 있음
+
+브라우저에서 지정한 기본값을 비우고 원하는 스타일로 초기화하는데 유용
+
+```html
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../pretty.css">
+  <link rel="stylesheet" href="./common.css">
+
+  <style>
+    .parent { color: slateblue; }
+
+    button:not(:first-of-type) {
+      all: unset;
+    }
+    button:last-child {
+      padding: 0.6em 1em;
+      background-color: white;
+      border: 2px solid #ddd;
+      border-radius: 0.4em;
+      cursor: pointer;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.16);
+    }
+  </style>
+  
+  <title>hcs-04-03-06</title>
+</head>
+<body>
+
+  <h1>all 속성</h1>
+  <p>
+    대부분의 속성을 <em>inherit</em>, <em>initial</em>, <em>unset</em>, <em>revert</em>값으로 지정할 수 있습니다. <br>
+    브라우저에서 지정한 기본값을 비우고 원하는 스타일로 초기화하는데 유용합니다.
+  </p>
+
+  <div class="parent">
+    <span class="class-label">.parent</span>
+    파랑 글자색이 적용된 div
+    <br><br>
+  <button>all unset 적용 전 버튼</button>
+  <br><br>
+  <button>all unset 적용 후 버튼</button>
+  <br><br>
+  <button>all unset 적용 후 스타일 추가</button>
+  </div>
+  
+</body>
+</html>
+```
+
+### CSS Reset
+
+https://meyerweb.com/eric/tools/css/reset/
+
+https://necolas.github.io/normalize.css/
+
+https://elad.medium.com/the-new-css-reset-53f41f13282e
+
 # 참고
 
 https://www.inflearn.com/course/%EC%A0%9C%EB%8C%80%EB%A1%9C-%ED%8C%8C%EB%8A%94-html-css
