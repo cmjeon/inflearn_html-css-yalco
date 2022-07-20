@@ -1081,7 +1081,7 @@ div {
 
 overflow 는 hidden 또는 scroll 로, white-space 는 nowrap 으로 지정해야 합니다.
 
-### Float 속성
+## Float 속성
 
 float 속성에 left 또는 right 값을 주면 매우 독특한 형태와 기능을 갖게 됩니다.
 
@@ -1104,6 +1104,38 @@ clear 속성을 이전의 float 요소들과 같이, 또는 both로 적용하면
 과거에 float은 페이지 레이아웃을 잡는데 다양하게 활용되었습니다. 
 
 그러나 오늘날에는 flex 등 더 좋은 방식들이 사용되기 때문에 사라져가는 추세입니다.
+
+## Grid 레이아웃
+
+### 부모 적용 속성들
+
+display : gird
+
+grid-template-columns : 열을 gird template 지정
+
+단위 fr : 비율
+
+gird-templete-rows : 행에 grid template 지정
+
+gap : 아이템간의 간격
+
+grid-auto-rows : 아이템의 높이
+
+justify-items : gird 안에 아이템을 기본축을 따라 정렬
+
+align-items : gird 안의 아이템을 보조축을 따라 정렬
+
+### 자식 적용 속성들
+
+grid-column : 아이템이 차지하는 열 영역의 크기
+
+grid-rows : 아이템이 차지하는 행 영역의 크기
+
+justify-self : 아이템을 기본축을 따라 정렬
+
+align-self : gird 안의 아이템을 보조축을 따라 정렬
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout
 
 # 참고
 
