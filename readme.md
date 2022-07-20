@@ -993,6 +993,51 @@ https://autoprefixer.github.io/
 }
 ```
 
+## 서체와 웹폰트
+
+### font-family 속성
+
+```css
+body {
+  font-family: AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;
+}
+```
+
+serif : 삐침이 있음
+
+sans-serif : 삐침이 없음
+
+https://developer.mozilla.org/ko/docs/Web/CSS/font-family
+
+### CSS 폰트의 한계
+
+사용자의 컴퓨터에 있는 폰트만 실질 적용 가능
+
+맥 사용자, 윈도우 사용자간 탑재 폰트 차이
+
+일관성 유지 어려움
+
+### 웹 폰트
+
+서버에 저장된 서체를 사용자의 컴퓨터에서 사용할 수 있도록 함
+
+https://fonts.google.com/
+
+https://noonnu.cc/
+
+### 웹폰트를 직접 배포
+
+폰트를 다운받아서 fonts 폴더에 넣기
+
+폰트명을 선언하고 사용
+
+```css
+@font-face {
+    font-family: "MyNotoSans";
+    src: url(./fonts/NotoSansKR-Regular.otf);
+}
+```
+
 # 참고
 
 https://www.inflearn.com/course/%EC%A0%9C%EB%8C%80%EB%A1%9C-%ED%8C%8C%EB%8A%94-html-css
