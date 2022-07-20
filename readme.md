@@ -1038,6 +1038,73 @@ https://noonnu.cc/
 }
 ```
 
+## 테이블 스타일링
+
+테이블 관련 요소들의 display에는 각각의 역할에 맞는 특수한 내부 속성들이 기본적으로 부여됩니다.
+
+https://developer.mozilla.org/ko/docs/Web/CSS/display#%EB%82%B4%EB%B6%80%EC%A0%81
+
+이 외에도 display 속성에는 이 강좌에서 직접 다루지 않은 다양한 값들이 있습니다.
+
+## 텍스트 심화
+
+### vertical-align 속성
+
+https://developer.mozilla.org/ko/docs/Web/CSS/vertical-align#values_(inline_elements%EC%97%90%EC%84%9C)
+
+https://developer.mozilla.org/ko/docs/Web/CSS/vertical-align#values_(table_cells%EC%97%90%EC%84%9C)
+
+### white-space 속성
+
+https://developer.mozilla.org/ko/docs/Web/CSS/white-space
+
+### text-overflow 속성
+
+텍스트 줄임표 ... 표현하기
+
+```html
+<div style="text-overflow: ellipsis;">
+  텍스트가 상자의 너비를 넘어갈 때 어떻게 표시될지를 지정합니다.
+</div>
+```
+
+```css
+div {
+    margin: 8px;
+    padding: 16px;
+    width: 360px;
+    border: 2px solid lightgray;
+    overflow: hidden;
+    white-space: nowrap;
+}
+```
+
+overflow 는 hidden 또는 scroll 로, white-space 는 nowrap 으로 지정해야 합니다.
+
+### Float 속성
+
+float 속성에 left 또는 right 값을 주면 매우 독특한 형태와 기능을 갖게 됩니다.
+
+먼저, 해당 요소는 '붕 뜬' 상태가 되어서, 나란히 배치된 요소들 가운데 자리를 차지하지 않게 됩니다. 
+
+때문에 다음에 오는 블록 요소들이 자리에서 밀려나지 않고, 그 아래로 들어가버리게 되죠. 
+
+그러면서도 특이하게도, 텍스트 등의 인라인 요소들은 float 요소들에 밀려나게 됩니다. 
+
+그리고 다른 float된 요소들 또한 마찬가지죠.
+
+또한 해당 요소가 인라인일 경우 블록과 같은 속성을 갖게 되어, CSS로 높이와 너비 등을 적용할 수 있게 됩니다. 
+
+물론 float 상태가 되므로 자리는 같은 float끼리만 차지하게 되죠.
+
+clear 속성을 이전의 float 요소들과 같이, 또는 both로 적용하면 그들 밑으로 들어가지 않고 아래로 빠져나오게 됩니다. 
+
+이전 형제들에 적용된 float의 효과를 해제하는데 clear 속성을 사용한다고 기억하시면 좋습니다.
+
+과거에 float은 페이지 레이아웃을 잡는데 다양하게 활용되었습니다. 
+
+그러나 오늘날에는 flex 등 더 좋은 방식들이 사용되기 때문에 사라져가는 추세입니다.
+
 # 참고
 
 https://www.inflearn.com/course/%EC%A0%9C%EB%8C%80%EB%A1%9C-%ED%8C%8C%EB%8A%94-html-css
