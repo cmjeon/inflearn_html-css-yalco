@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML & CSS 04-12-05</title>
+
+  <style>
+      body { margin: 0; }
+      #container > div {
+          display: flex;
+          min-height: 200px;
+          background-size: cover;
+          background-position: center;
+          justify-content: center;
+          align-items: center;
+      }
+      #container > div > div {
+          display: flex;
+          width: 67%;
+          height: 67%;
+          font-size: 2em;
+          font-weight: bold;
+          color: white;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+          justify-content: center;
+          align-items: center;
+          border-radius: 24px;
+          box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+      }
+      .img_1 { background-image: url(https://showcases.yalco.kr/html-css-scoop/04-12/images/01.jpg); }
+      .img_2 { background-image: url(https://showcases.yalco.kr/html-css-scoop/04-12/images/02.jpg); }
+      .img_3 { background-image: url(https://showcases.yalco.kr/html-css-scoop/04-12/images/03.jpg); }
+      .img_4 { background-image: url(https://showcases.yalco.kr/html-css-scoop/04-12/images/04.jpg); }
+  </style>
+
+  <!-- 아래의 CSS를 작성해보세요! -->
+  <link rel="stylesheet" href="./05.css">
+
+</head>
+<body>
+
+<section>
+  <div id="container">
+    <div class="img_1">
+      <div>blur(50px)</div>
+    </div>
+    <div class="img_2">
+      <div>contrast(500%)</div>
+    </div>
+    <div class="img_3">
+      <div>sepia(100%)</div>
+    </div>
+    <div class="img_4">
+      <div>saturate(0%)</div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

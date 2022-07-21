@@ -1165,6 +1165,163 @@ animation 속성을 사용하면 자바스크립트 없이 요소에 애니메�
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/animation
 
+## 반응형 웹
+
+### 적응형 웹 vs 반응형 웹
+
+||	적응형	| 반응형 |
+|---|---|---|
+|설명	|화면 크기 따라 다른 페이지를 보여줌|	화면 크기에 따라 요소들을 변화시킴|
+|예시	|네이버	|애플|
+|장점	|각 화면 크기에 집중하여 작업 가능	|하나의 페이지로 여러 크기에 대응 가능|
+|단점	|페이지를 두 개를 만들어야 함	|컨텐츠가 복잡할 경우 작업하기 어려움|
+
+### 미디어 쿼리
+
+```html
+<main>
+  <section>
+    <h1>여러 화면크기로 살펴보세요!</h1>
+    <div class="mobile">스마트폰</div>
+    <div class="low-tablet">저해상도 태블릿</div>
+    <div class="port-tablet">태블릿 세로</div>
+    <div class="low-pc">저해상도 PC</div>
+    <div class="high-pc">일반 PC</div>
+  </section>
+</main>
+```
+
+```css
+body { margin: 0; }
+section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+div { 
+  display: none; 
+  font-size: 1.4em;
+}
+
+/* 스마트폰 */
+@media (max-width: 480px) {
+  section { background-color: tomato; }
+  .mobile { display: inherit; }
+}
+
+/* 저해상도 태블릿 */
+@media (min-width: 481px) and (max-width: 767px) {
+  section { background-color: olivedrab; }
+  .low-tablet { display: inherit; }
+}
+
+/* 태블릿 세로 화면 */
+@media (min-width: 768px) and (max-width: 1024px) {
+  section { background-color: darkorchid; }
+  .port-tablet { display: inherit; }
+}
+
+/* 태블릿 가로 및 저해상도 노트북, PC 화면 */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  section { background-color: darkorange; }
+  .low-pc { display: inherit; }
+}
+
+/* 일반 노트북, PC 화면 */
+@media (min-width: 1281px) {
+  section { background-color: slateblue; }
+  .high-pc { display: inherit; }
+}
+
+/* or 조건 사용 */
+@media (max-width: 480px), (min-width: 1281px) {
+  div { color: yellow; }
+}
+```
+
+## 기타 속성들
+
+### clip과 clip-path 속성
+
+```css
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+```
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/clip
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path
+
+### scroll-snap
+
+scroll-snap-type
+
+부모 요소에 스크롤 스냅할 방향( x | y | both )과 방식( proximity | mandatory )을 설정
+
+- proximity: 스냅할 위치에 가까울 때 스냅
+- mandatory: 항상 가까운 방향으로 스냅
+
+scroll-snap-align
+
+자식 요소에 스크롤 스냅될 기준선을 지정합니다.
+
+### aspect-ratio
+
+박스 요소의 가로 세로 비율을 지정
+
+### backdrop-filter
+
+적용된 요소의 영역만큼, 그 뒤에 있는 요소에 필터를 적용합니다.
+
+-webkit- 벤더 프리픽스와 함께 사용합니다.
+
+## 프레임워크와 라이브러리 이용하기
+
+### 유명 프론트엔드 프레임워크들
+
+Bootstrap : https://getbootstrap.com/
+
+UIkit : https://getuikit.com/
+
+Materialize : https://materializecss.com/
+
+Bulma : https://bulma.io/
+
+### 아이콘 라이브러리
+
+Font Awesome : https://fontawesome.com/
+
+Goodle Fonts Icons : https://fonts.google.com/icons
+
+```html
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  x="0px" y="0px" viewBox="0 0 48 48"
+  style="enable-background:new 0 0 48 48;"
+  xml:space="preserve">
+
+<!-- 아래에 색상값과 d값을 넣으세요! -->
+<path 
+  style="fill: #000000;"
+  d=""
+/>
+</svg>
+```
+
+# 파이널 프로젝트
 
 
 
