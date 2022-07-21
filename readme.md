@@ -1137,6 +1137,37 @@ align-self : gird 안의 아이템을 보조축을 따라 정렬
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout
 
+## 변형과 애니메이션
+
+### transform 속성
+
+transform 속성은 주위 요소들에 영향을 끼치지 않으면서 요소의 모습을 바꿈
+
+https://developer.mozilla.org/ko/docs/Web/CSS/transform
+
+### transition 속성
+
+transiton 속성은 CSS 값이 달라질 때 요소에 어떤 효과로 반영될지 지정합니다.
+
+속성, 지속시간, 시간함수, 지연시간 순으로 값을 넣을 수 있습니다.
+
+주의! 적용할 CSS 속성이 이미 기존값이 적용되어 있어야 동작합니다.
+
+슬라이드 효과
+
+https://developer.mozilla.org/ko/docs/Web/CSS/transition
+
+https://cubic-bezier.com/#.17,.67,.83,.67
+
+### animation 속성
+
+animation 속성을 사용하면 자바스크립트 없이 요소에 애니메이션을 적용할 수 있습니다.
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/animation
+
+
+
+
 # 참고
 
 https://www.inflearn.com/course/%EC%A0%9C%EB%8C%80%EB%A1%9C-%ED%8C%8C%EB%8A%94-html-css
