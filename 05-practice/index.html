@@ -184,7 +184,77 @@
         </ol>
       </div>
     </section>
-
+    <section id="contact" class="section">
+      <header class="section__header">
+        <strong class="section__tag">
+          contact
+        </strong>
+        <h1 class="section__title">
+          문의하기
+        </h1>
+      </header>
+      <div class="contact">
+        <div class="contact__tab">
+          <input name="contact" type="radio" id="ct_1" checked>
+          <label for="ct_1" class="sr-only">연락처</label>
+          <input name="contact" type="radio" id="ct_2">
+          <label for="ct_2" class="sr-only">메시지</label>
+          <div class="contact__slides">
+            <div class="contact__slide-con">
+              <div class="contact__slide">
+                <address>
+                  <table class="contact__contacts">
+                    <caption class="sr-only">연락처 목록</caption>
+                    <tr>
+                      <th>유튜브</th>
+                      <td>
+                        <a href="https://www.youtube.com/c/얄팍한코딩사전" target="_blank" alt="새 창에서 열기">
+                          <img src="./images/youtube.svg" alt="">
+                          채널 바로가기
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>웹사이트</th>
+                      <td>
+                        <a href="https://www.yalco.kr" target="_blank" alt="새 창에서 열기">
+                          https://www.yalco.kr
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>이메일</th>
+                      <td>
+                        <a href="mailto:yalco@kakao.com">
+                          yalco@kakao.com
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+                </address>
+              </div>
+              <div class="contact__slide">
+                <form action="#" method="get">
+                  <div class="contact__leave">
+                    <textarea name="message" placeholder="메시지를 입력하세요." required></textarea>
+                    <div>
+                      <input name="email" type="email" placeholder="메일주소를 입력하세요." required>
+                      <button type="submit">남기기</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+  <footer>
+    <h1 class="sr-only">Copyright</h1>
+    <p>
+      2022 yalco - All rights reserved
+    </p>
+  </footer>
 </body>
 </html>
